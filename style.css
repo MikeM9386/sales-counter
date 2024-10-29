@@ -1,31 +1,55 @@
+/* Updated CSS for Notion-like styling */
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    background-color: transparent; /* Matches Notion's background */
+    margin: 0;
+    padding: 0;
 }
 
 .counter {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+}
+
+.counter h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #37352f; /* Notion's default text color */
+    margin-bottom: 16px;
 }
 
 #count {
-    font-size: 64px;
-    color: #333;
+    font-size: 48px;
+    font-weight: 700;
+    color: #2f3437; /* Slightly darker for emphasis */
+    margin: 20px 0;
 }
 
 button {
-    font-size: 20px;
-    padding: 12px 24px;
-    margin: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #0066ff;
-    color: #fff;
-    transition: background-color 0.3s;
+    font-size: 16px;
+    padding: 8px 16px;
+    margin: 0 8px;
+    border: 1px solid rgba(55, 53, 47, 0.16); /* Light border */
+    border-radius: 3px;
+    background-color: #fff; /* White background */
+    color: #37352f; /* Notion's text color */
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.2s, border-color 0.2s;
 }
 
 button:hover {
-    background-color: #0052cc;
+    background-color: rgba(55, 53, 47, 0.08); /* Light hover effect */
+    border-color: rgba(55, 53, 47, 0.32); /* Darken border on hover */
+}
+
+button:active {
+    background-color: rgba(55, 53, 47, 0.16); /* Slightly darker on click */
+}
+
+button:focus {
+    box-shadow: 0 0 0 2px rgba(55, 53, 47, 0.2); /* Focus outline */
 }
