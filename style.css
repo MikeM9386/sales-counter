@@ -1,7 +1,8 @@
+/* Base styles (default to light mode) */
 body {
     font-family: Arial, sans-serif;
-    /* Allow the embedding environment to set the background color */
     background-color: transparent;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,15 +12,11 @@ body {
 
 .counter {
     text-align: center;
-    /* Remove any hard-coded text color */
-    color: inherit;
 }
 
 #count {
     font-size: 48px;
     margin: 20px 0;
-    /* Remove any hard-coded text color */
-    color: inherit;
 }
 
 button {
@@ -27,11 +24,10 @@ button {
     padding: 10px 20px;
     margin: 0 10px;
     cursor: pointer;
-    /* Remove hard-coded styles */
     background-color: transparent;
-    border: 2px solid;
+    border: 2px solid black;
     border-radius: 5px;
-    color: inherit;
+    color: black;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -39,3 +35,18 @@ button:hover {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+    body {
+        color: white;
+    }
+
+    button {
+        border-color: white;
+        color: white;
+    }
+
+    button:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
