@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5; /* Page background color */
+    /* Allow the embedding environment to set the background color */
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,35 +11,31 @@ body {
 
 .counter {
     text-align: center;
+    /* Remove any hard-coded text color */
+    color: inherit;
 }
 
 #count {
     font-size: 48px;
     margin: 20px 0;
+    /* Remove any hard-coded text color */
+    color: inherit;
 }
 
 button {
     font-size: 18px;
-    padding: 12px 24px;
+    padding: 10px 20px;
     margin: 0 10px;
     cursor: pointer;
-    border: none;
+    /* Remove hard-coded styles */
+    background-color: transparent;
+    border: 2px solid;
     border-radius: 5px;
-    background-color: #f5f5f5; /* Same as page background */
-    transition: background-color 0.3s ease;
+    color: inherit;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 button:hover {
-    animation: multicolor 2s infinite;
-    color: #fff;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
-@keyframes multicolor {
-    0% { background-color: red; }
-    16% { background-color: orange; }
-    33% { background-color: yellow; }
-    50% { background-color: green; }
-    66% { background-color: blue; }
-    83% { background-color: indigo; }
-    100% { background-color: violet; }
-}
